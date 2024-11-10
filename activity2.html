@@ -6,16 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>JSON</h2>
+    <h2>async/Await</h2>
     <p id="p1"></p>
-    <p id="p2"></p>
     <script>
-        var obj={name:"Amadou",grade:1};
-        var JSONObj=JSON.parse(JSONObj);
-        var RecObj = JSON.parse(JSONObj);
-        document.getElementById("p1").innerHTML=RecObj.name;
-        document.getElementById("p2").innerHTML = RecObj["grade"];
-
+        async function add(a,b){
+            let sum=await(a+b);
+            display(sum);
+        }
+        function display(n){
+            document.getElementById("p1").innerHTML="sum is"+n;
+        }
+        add(10,20)
     </script>
 </body>
 </html>
